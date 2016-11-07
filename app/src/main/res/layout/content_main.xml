@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="etl.com.bd.animatedsplash.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+   <Spinner
+       android:layout_width="match_parent"
+       android:layout_height="70dp"
+       android:id="@+id/MainActivity_Select_Blood_Group"
+       android:layout_alignParentTop="true"
+       android:layout_alignParentLeft="true"
+       android:layout_margin="15dp"
+       android:spinnerMode="dropdown">
+
+   </Spinner>
+
+   <android.support.v7.widget.RecyclerView
+       android:id="@+id/rv_demoRecyclerview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:visibility="visible"></android.support.v7.widget.RecyclerView>
+   <TextView
+       android:id="@+id/tv_mainactivity_emptyview"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:text="No data found."
+       android:gravity="center"
+       android:textSize="18dp"
+       android:visibility="gone"/>
+
+
+
+</LinearLayout>

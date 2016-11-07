@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_tips"
+            android:icon="@drawable/tips"
+            android:title="Tips For Donar" />
+        <item
+            android:id="@+id/nav_FAQs"
+            android:icon="@drawable/faqs"
+            android:title="FAQs" />
+        <item
+            android:id="@+id/nav_profile_settings"
+            android:icon="@drawable/profilesettings"
+            android:title="Profile Settings" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/help"
+            android:title="Help" />
+
+            <item
+                android:id="@+id/nav_about"
+                android:icon="@drawable/ic_menu_about"
+                android:title="About" />
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@drawable/ic_menu_logout"
+                android:title="Logout" />
+        </group>
+
+
+</menu>
