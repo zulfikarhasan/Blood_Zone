@@ -9,6 +9,7 @@ public class DemoDataHandler {
     String full_name;
     String phone_number;
     String address;
+    String blood_group;
 
     public DemoDataHandler(){
 
@@ -42,5 +43,13 @@ public class DemoDataHandler {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public String getBlood_group() {
+        return blood_group;
+    }
+
+    public void setBlood_group(String blood_group) {
+        this.blood_group = blood_group;
     }
 }

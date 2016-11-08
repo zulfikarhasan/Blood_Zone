@@ -39,6 +39,8 @@ public class DemoDataloadAdapter extends RecyclerView.Adapter<DemoDataloadAdapte
         TextView textViewName;
         TextView textViewEmail;
         TextView textViewAddress;
+
+
         public MyDemoListViewHolder(View itemView) {
             super(itemView);
 
@@ -50,14 +52,6 @@ public class DemoDataloadAdapter extends RecyclerView.Adapter<DemoDataloadAdapte
                 @Override
                 public void onClick(View view) {
 
-//                    // selected item
-//                    String product = ((TextView) view).getText().toString();
-//
-//                    // Launching new Activity on selecting single List Item
-//                    Intent i = new Intent(context, Donor_Profile.class);
-//                    // sending data to new activity
-//                    i.putExtra("product", product);
-//                    context.startActivity(i);
                 }
             });
         }

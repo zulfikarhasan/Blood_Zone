@@ -1,5 +1,6 @@
 package etl.com.bd.animatedsplash;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -72,6 +73,12 @@ public class MainActivity extends AppCompatActivity
             R.drawable.abpositive,
             R.drawable.abnegitive
     };
+
+
+
+
+    // 8/11/2016
+    ProgressDialog mProgressDialog;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -120,6 +127,12 @@ public class MainActivity extends AppCompatActivity
         //String linkrequest = "http://192.168.10.127/Blooddonetion/getlistItem.php";
 
         String linkrequest = "http://10.0.2.2/Blooddonetion/getlistItem.php";
+        //8/11/2016
+        mProgressDialog = new ProgressDialog(MainActivity.this);
+
+        mProgressDialog.setMessage("Loading...");
+        mProgressDialog.show();
+
         StringRequest stringRrquest = new StringRequest(Request.Method.GET, linkrequest, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -137,6 +150,7 @@ public class MainActivity extends AppCompatActivity
                         dhandler.setFull_name(name.toString().trim());
                         dhandler.setPhone_number(phone_number.toString().trim());
                         dhandler.setAddress(address.toString().trim());
+
                         demoList.add(dhandler);
                     }
 
@@ -162,6 +176,7 @@ public class MainActivity extends AppCompatActivity
             ddLoadAdapter.notifyDataSetChanged();
             recyclerViewDemo.setLayoutManager(new LinearLayoutManager(this));
             recyclerViewDemo.setAdapter(ddLoadAdapter);
+            mProgressDialog.dismiss();
         }else {
             recyclerViewDemo.setVisibility(View.GONE);
             textViewNullView.setVisibility(View.VISIBLE);
