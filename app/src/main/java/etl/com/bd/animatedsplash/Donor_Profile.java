@@ -7,18 +7,20 @@ import android.widget.TextView;
 
 public class Donor_Profile extends AppCompatActivity {
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_donor__profile);
-        TextView txtProduct = (TextView) findViewById(R.id.product_label);
 
-        Intent i = getIntent();
-        // getting attached intent data
-        String product = i.getStringExtra("product");
-        // displaying selected product name
-        txtProduct.setText(product);
+
+        TextView Name = (TextView)findViewById(R.id.tv_Donor_Name);
+        TextView Number = (TextView)findViewById(R.id.tv_Donor_Number);
+        TextView Address = (TextView)findViewById(R.id.tv_Donor_Address);
+
+
+        Name.setText("Name: "+getIntent().getStringExtra("Name"));
+        Number.setText("Number: "+getIntent().getStringExtra("Number"));
+        Address.setText("Address: "+getIntent().getStringExtra("Address"));
+
     }
 }

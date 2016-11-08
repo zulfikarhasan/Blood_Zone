@@ -79,6 +79,7 @@ public class MainActivity extends AppCompatActivity
 
     // 8/11/2016
     ProgressDialog mProgressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -182,10 +183,6 @@ public class MainActivity extends AppCompatActivity
             textViewNullView.setVisibility(View.VISIBLE);
         }
     }
-
-
-
-
     // Creating an Adapter Class
     public class MyAdapter extends ArrayAdapter {
 

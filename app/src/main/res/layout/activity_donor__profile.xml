@@ -4,14 +4,29 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    >
 
 
-    <TextView android:id="@+id/product_label"
+    <TextView android:id="@+id/tv_Donor_Name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textSize="25dip"
         android:textStyle="bold"
         android:padding="10dip"
-        android:textColor="#ffffff"/>
+        />
+    <TextView android:id="@+id/tv_Donor_Number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dip"
+        android:textStyle="bold"
+        android:padding="10dip"
+        />
+    <TextView android:id="@+id/tv_Donor_Address"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dip"
+        android:textStyle="bold"
+        android:padding="10dip"
+        />
 </LinearLayout>
