@@ -7,9 +7,12 @@ package etl.com.bd.animatedsplash.mode;
 public class DemoDataHandler {
 
     String full_name;
+    String email;
+    String gender;
     String phone_number;
     String address;
     String blood_group;
+    String age;
 
     public DemoDataHandler(){
 
@@ -51,5 +54,29 @@ public class DemoDataHandler {
 
     public void setBlood_group(String blood_group) {
         this.blood_group = blood_group;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

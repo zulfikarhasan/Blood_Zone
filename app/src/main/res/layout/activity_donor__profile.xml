@@ -4,29 +4,260 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:layout_margin="25dp"
+    android:layout_marginTop="25dp"
+
     >
 
 
-    <TextView android:id="@+id/tv_Donor_Name"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25dip"
-        android:textStyle="bold"
-        android:padding="10dip"
-        />
-    <TextView android:id="@+id/tv_Donor_Number"
-        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <ImageView
+            android:layout_width="88dp"
+            android:layout_height="86dp"
+            android:src="@drawable/maledonor" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/tv_donor_profile_level_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Md Zulfikar Hasan"
+                android:textSize="25dp"
+                android:layout_weight="2"/>
+            <TextView
+                android:id="@+id/tv_donor_profile_level_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="zulfikarhasan07@gmail.com"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25dip"
-        android:textStyle="bold"
-        android:padding="10dip"
-        />
-    <TextView android:id="@+id/tv_Donor_Address"
-        android:layout_width="fill_parent"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_donor_profile_Full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Md Zulfikar Hasan"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="4"
+    android:layout_marginTop="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="25dip"
-        android:textStyle="bold"
-        android:padding="10dip"
-        />
+        android:text="Gender:"
+        android:layout_weight="3"/>
+    <TextView
+        android:id="@+id/tv_donor_profile_Gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Male"
+        android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_donor_profile_Age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="18"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Group:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_donor_profile_Blood_Group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B+"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_donor_profile_Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="01834580056"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_donor_profile_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="South Baridara, Merul badda,Dhaka"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"
+        android:background="#ec4b4b"
+        android:gravity="center"
+        android:orientation="horizontal"
+
+        >
+        <View
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/btn_facebook"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/phone" />
+        <ImageButton
+            android:id="@+id/btn_email"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/msg" />
+        <ImageButton
+            android:id="@+id/btn_twitter"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/img_bg"
+            android:src="@drawable/email" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"  />
+    </LinearLayout>
 </LinearLayout>

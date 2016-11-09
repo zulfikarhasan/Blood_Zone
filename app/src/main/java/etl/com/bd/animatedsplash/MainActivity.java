@@ -144,13 +144,21 @@ public class MainActivity extends AppCompatActivity
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject innerobj = array.getJSONObject(i);
                         String name = innerobj.getString("name");
+                        String email = innerobj.getString("email");
+                        String gender = innerobj.getString("gender");
                         String phone_number = innerobj.getString("phone_number");
                         String address = innerobj.getString("address");
+                        String blood_group = innerobj.getString("blood_group");
+                        String age = innerobj.getString("age");
 
                         DemoDataHandler dhandler = new DemoDataHandler();
                         dhandler.setFull_name(name.toString().trim());
+                        dhandler.setEmail(email.toString().trim());
+                        dhandler.setGender(gender.toString().trim());
                         dhandler.setPhone_number(phone_number.toString().trim());
                         dhandler.setAddress(address.toString().trim());
+                        dhandler.setBlood_group(blood_group.toString().trim());
+                        dhandler.setAge(age.toString().trim());
 
                         demoList.add(dhandler);
                     }

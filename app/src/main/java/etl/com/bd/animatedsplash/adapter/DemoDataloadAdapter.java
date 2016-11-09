@@ -62,8 +62,13 @@ public class DemoDataloadAdapter extends RecyclerView.Adapter<DemoDataloadAdapte
 
             Intent intent = new Intent(this.context,Donor_Profile.class);
             intent.putExtra("Name",demoInfo.getFull_name());
+            intent.putExtra("Email",demoInfo.getEmail());
+            intent.putExtra("Gender",demoInfo.getGender());
             intent.putExtra("Number",demoInfo.getPhone_number());
             intent.putExtra("Address",demoInfo.getAddress());
+            intent.putExtra("blood_group",demoInfo.getBlood_group());
+            intent.putExtra("Age",demoInfo.getAge());
+
 
             this.context.startActivity(intent);
         }
