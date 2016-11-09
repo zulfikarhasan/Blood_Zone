@@ -39,6 +39,7 @@ public class DemoDataloadAdapter extends RecyclerView.Adapter<DemoDataloadAdapte
         TextView textViewName;
         TextView textViewNumber;
         TextView textViewAddress;
+        TextView textViewBlood;
 
         ArrayList<DemoDataHandler> demoInfo = new ArrayList<DemoDataHandler>();
         Context context;
@@ -49,7 +50,8 @@ public class DemoDataloadAdapter extends RecyclerView.Adapter<DemoDataloadAdapte
             itemView.setOnClickListener(this);
 
             textViewName = (TextView)view.findViewById(R.id.tv_rowview_name);
-            textViewNumber = (TextView)view.findViewById(R.id.tv_rowview_email);
+            textViewBlood = (TextView)view.findViewById(R.id.tv_rowview_blood);
+            textViewNumber = (TextView)view.findViewById(R.id.tv_rowview_number);
             textViewAddress = (TextView)view.findViewById(R.id.tv_rowview_address);
 
 
@@ -86,6 +88,7 @@ public class DemoDataloadAdapter extends RecyclerView.Adapter<DemoDataloadAdapte
         holder.textViewName.setText(demoInfo.get(position).getFull_name());
         holder.textViewNumber.setText(demoInfo.get(position).getPhone_number());
         holder.textViewAddress.setText(demoInfo.get(position).getAddress());
+        holder.textViewBlood.setText(demoInfo.get(position).getBlood_group());
     }
 
     @Override

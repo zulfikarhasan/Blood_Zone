@@ -73,10 +73,6 @@ public class MainActivity extends AppCompatActivity
             R.drawable.abpositive,
             R.drawable.abnegitive
     };
-
-
-
-
     // 8/11/2016
     ProgressDialog mProgressDialog;
 
