@@ -20,7 +20,8 @@
        android:id="@+id/MainActivity_Select_Blood_Group"
        android:layout_alignParentTop="true"
        android:layout_alignParentLeft="true"
-       android:layout_margin="15dp"
+       android:layout_marginLeft="15dp"
+       android:layout_marginRight="15dp"
        android:textAlignment="center"
        android:spinnerMode="dropdown"
        android:background="@drawable/spinner_box">
@@ -33,6 +34,7 @@
        android:id="@+id/rv_demoRecyclerview"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
+       android:layout_marginTop="15dp"
        android:visibility="visible"></android.support.v7.widget.RecyclerView>
    <TextView
        android:id="@+id/tv_mainactivity_emptyview"

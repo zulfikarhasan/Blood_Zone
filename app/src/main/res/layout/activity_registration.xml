@@ -151,7 +151,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Phone Number"
-                android:drawableLeft="@drawable/phone"
+                android:drawableLeft="@drawable/phonenumber"
                 android:drawablePadding="15dp"
                 android:inputType="number"
                 />
@@ -178,12 +178,12 @@
 
         <Spinner
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:id="@+id/Select_Blood_Group"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:spinnerMode="dropdown"
-
+            android:background="@drawable/spinner_box"
             >
 
         </Spinner>

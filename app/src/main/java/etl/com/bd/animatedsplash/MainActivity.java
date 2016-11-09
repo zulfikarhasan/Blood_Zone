@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity
     String[] Blood_Group = {"Search Blood","A+", "A-", "B+", "B-","O+","O-","AB+","AB-" };
 
     // Declaring the Integer Array with resourse Id's of Images for the Spinners
-    Integer[] images = { 0,
+    Integer[] images = {R.drawable.blood,
             R.drawable.apositive,
             R.drawable.anegitive,
             R.drawable.bpositive,
@@ -87,11 +87,40 @@ public class MainActivity extends AppCompatActivity
 
         spinner_blood_group.setAdapter(new MyAdapter(MainActivity.this,R.layout.custom_spinner,Blood_Group));
 
+
+
+        loadinaternetdata();
+
         spinner_blood_group.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
-                /// blood group searching
+                String selectedItem = adapterView.getItemAtPosition(i).toString();
+                if(selectedItem.equals("A+")){
+                    Toast.makeText(getApplicationContext(),"A+",Toast.LENGTH_SHORT).show();
+                }
+                else if(selectedItem.equals("A-")){
+                    Toast.makeText(getApplicationContext(),"A-",Toast.LENGTH_SHORT).show();
+                }
+                else if(selectedItem.equals("B+")){
+                    Toast.makeText(getApplicationContext(),"B+",Toast.LENGTH_SHORT).show();
+                }
+                else if(selectedItem.equals("B-")){
+                    Toast.makeText(getApplicationContext(),"B-",Toast.LENGTH_SHORT).show();
+                }
+                else if(selectedItem.equals("O+")){
+                    Toast.makeText(getApplicationContext(),"O+",Toast.LENGTH_SHORT).show();
+                }
+                else if(selectedItem.equals("O-")){
+                    Toast.makeText(getApplicationContext(),"O-",Toast.LENGTH_SHORT).show();
+                }
+                else if(selectedItem.equals("AB+")){
+                    Toast.makeText(getApplicationContext(),"AB+",Toast.LENGTH_SHORT).show();
+                }
+                else if(selectedItem.equals("AB-")){
+                    Toast.makeText(getApplicationContext(),"AB-",Toast.LENGTH_SHORT).show();
+                }
+
             }
 
             @Override
@@ -99,7 +128,7 @@ public class MainActivity extends AppCompatActivity
 
             }
         });
-        loadinaternetdata();
+
 
 
         // shared Preferences
