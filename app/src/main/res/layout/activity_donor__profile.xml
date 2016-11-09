@@ -47,7 +47,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="5px"
+        android:layout_height="2px"
         android:layout_marginTop="5dp"
         android:background="#b0bec5"
         android:layout_gravity="center">
@@ -231,14 +231,15 @@
             android:layout_weight="1" />
 
         <ImageButton
-            android:id="@+id/btn_facebook"
+            android:id="@+id/btn_donor_profile_call"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginRight="10dp"
             android:background="@drawable/img_bg"
             android:src="@drawable/phone" />
         <ImageButton
-            android:id="@+id/btn_email"
+
+            android:id="@+id/btn_donor_profile_msg"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"
@@ -246,7 +247,7 @@
             android:background="@drawable/img_bg"
             android:src="@drawable/msg" />
         <ImageButton
-            android:id="@+id/btn_twitter"
+            android:id="@+id/btn_donor_profile_email"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginLeft="10dp"

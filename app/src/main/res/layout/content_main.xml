@@ -16,14 +16,18 @@
 
    <Spinner
        android:layout_width="match_parent"
-       android:layout_height="70dp"
+       android:layout_height="70dip"
        android:id="@+id/MainActivity_Select_Blood_Group"
        android:layout_alignParentTop="true"
        android:layout_alignParentLeft="true"
        android:layout_margin="15dp"
-       android:spinnerMode="dropdown">
+       android:textAlignment="center"
+       android:spinnerMode="dropdown"
+       android:background="@drawable/spinner_box">
 
    </Spinner>
+
+
 
    <android.support.v7.widget.RecyclerView
        android:id="@+id/rv_demoRecyclerview"

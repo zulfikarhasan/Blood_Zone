@@ -4,9 +4,12 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:name=".utils.ServiceHelper"
@@ -28,7 +31,7 @@
         <activity android:name=".Registration" />
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main"
+            android:label="Blood Zone"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TipsForDonnar"
@@ -50,6 +53,8 @@
 
 
         <activity android:name=".Donor_Profile"
+            android:parentActivityName=".MainActivity"
+            android:label="Donor Profile"
             ></activity>
     </application>
 
