@@ -10,8 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.telephony.PhoneStateListener;
 import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,7 +21,7 @@ public class Donor_Profile extends AppCompatActivity {
 
 
     TextView tv_level_Name, tv_level_email, tv_Full_Name, tv_Gender, tv_Age, tv_Number, tv_Address, tv_Blood_Group;
-    ImageButton btn_call,btn_msg,btn_email;
+    ImageView iv_call,iv_sms,iv_email;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +35,9 @@ public class Donor_Profile extends AppCompatActivity {
         tv_Number = (TextView) findViewById(R.id.tv_donor_profile_Number);
         tv_Address = (TextView) findViewById(R.id.tv_donor_profile_Address);
         tv_Blood_Group = (TextView) findViewById(R.id.tv_donor_profile_Blood_Group);
-        btn_call = (ImageButton) findViewById(R.id.btn_donor_profile_call);
-        btn_msg = (ImageButton)findViewById(R.id.btn_donor_profile_msg);
-        btn_email = (ImageButton)findViewById(R.id.btn_donor_profile_email);
+        iv_call = (ImageView)findViewById(R.id.iv_call);
+        iv_sms = (ImageView)findViewById(R.id.iv_massage);
+        iv_email = (ImageView)findViewById(R.id.iv_email);
 
         tv_level_Name.setText(getIntent().getStringExtra("Name"));
         tv_level_email.setText(getIntent().getStringExtra("Email"));
@@ -47,29 +49,43 @@ public class Donor_Profile extends AppCompatActivity {
         tv_Blood_Group.setText(getIntent().getStringExtra("blood_group"));
 
 
-        btn_call.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"call:",Toast.LENGTH_SHORT).show();
-            }
-        });
-
-
-       btn_msg.setOnClickListener(new View.OnClickListener() {
+       iv_call.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View v) {
-               Toast.makeText(getApplicationContext(),"massage",Toast.LENGTH_SHORT).show();
+               String callText = getIntent().getStringExtra("Number");
+               Intent call=new Intent(Intent.ACTION_VIEW, Uri.parse("tel:"+callText));
+               startActivity(call);
+
            }
        });
 
-        btn_email.setOnClickListener(new View.OnClickListener() {
+        iv_sms.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(getApplicationContext(),"email",Toast.LENGTH_SHORT).show();
+                String smsText=getIntent().getStringExtra("Number");
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("sms:" + smsText));
+                intent.putExtra("","" );
+                startActivity(intent);
             }
+
         });
 
+      iv_email.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
 
+              String email  = getIntent().getStringExtra("Email");
+              Intent intent = new Intent(Intent.ACTION_SEND);
+              intent.setType("text/html");
+              intent.putExtra(Intent.EXTRA_EMAIL, email);
+              intent.putExtra(Intent.EXTRA_SUBJECT, "Subject");
+              intent.putExtra(Intent.EXTRA_TEXT, "email body.");
+
+              startActivity(Intent.createChooser(intent, "Send Email"));
+
+          }
+      });
 
     }
+
 }

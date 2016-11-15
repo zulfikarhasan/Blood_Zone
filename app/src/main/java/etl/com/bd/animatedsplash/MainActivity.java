@@ -52,6 +52,8 @@ import etl.com.bd.animatedsplash.utils.ServiceHelper;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    //profile
+    String nav_username, nav_useremail;
 
     NavigationView navigationView = null;
     Toolbar toolbar = null;
@@ -61,6 +63,7 @@ public class MainActivity extends AppCompatActivity
     DemoDataloadAdapter ddLoadAdapter;
     private List<DemoDataHandler> demoList = new ArrayList<>();
     public static final String KEY_BLOODGROUP = "blood_group";
+    public static final String KEY_EMAIL = "email";
 
     Spinner spinner_blood_group;
     String blood_group;
@@ -92,7 +95,6 @@ public class MainActivity extends AppCompatActivity
         spinner_blood_group = (Spinner) findViewById(R.id.MainActivity_Select_Blood_Group);
 
         spinner_blood_group.setAdapter(new MyAdapter(MainActivity.this, R.layout.custom_spinner, Blood_Group));
-
 
         loadinaternetdata();
 
@@ -143,8 +145,22 @@ public class MainActivity extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
+//        navigationView = (NavigationView) findViewById(R.id.nav_view);
+//        navigationView.setNavigationItemSelectedListener(this);
+
+        //profile
+        Intent intent = getIntent();
+        nav_useremail = intent.getStringExtra("KEY_EMAIL");
+        getUserInformation(nav_useremail);
+
         navigationView = (NavigationView) findViewById(R.id.nav_view);
+        View nhview = navigationView.getHeaderView(0);
         navigationView.setNavigationItemSelectedListener(this);
+        TextView navProfileName = (TextView) nhview.findViewById(R.id.tv_nav_username);
+        TextView navProfileemail = (TextView) nhview.findViewById(R.id.tv_nav_email);
+
+        navProfileName.setText(nav_username);
+        navProfileemail.setText(nav_useremail);
 
     }
 
@@ -279,15 +295,15 @@ public class MainActivity extends AppCompatActivity
     }
 
 
-    @Override
-    public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
-        }
-    }
+//    @Override
+//    public void onBackPressed() {
+//        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+//        if (drawer.isDrawerOpen(GravityCompat.START)) {
+//            drawer.closeDrawer(GravityCompat.START);
+//        } else {
+//            super.onBackPressed();
+//        }
+//    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -404,6 +420,48 @@ public class MainActivity extends AppCompatActivity
             protected Map<String, String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put(KEY_BLOODGROUP, bloodgroup);
+                return params;
+            }
+        };
+        RequestQueue requestQueue = Volley.newRequestQueue(MainActivity.this);
+        requestQueue.add(stringRequest);
+    }
+
+    //profile
+    private void getUserInformation(final String email){
+        String linkrequest = "http://10.0.2.2/Blooddonetion/userdetails.php";
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, linkrequest,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject object = new JSONObject(response);
+                            JSONArray array = object.getJSONArray("result");
+
+                            if (array.length()>0) {
+                                for (int i = 0; i < array.length(); i++) {
+                                    JSONObject innerobj = array.getJSONObject(i);
+                                    nav_username = innerobj.getString("name");
+                                    Toast.makeText(getApplicationContext(), nav_username, Toast.LENGTH_SHORT).show();
+                                }
+                            }
+
+                        } catch (JSONException e) {
+                            mProgressDialog.dismiss();
+                        }
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                mProgressDialog.dismiss();
+               // Toast.makeText(MainActivity.this, "Internet Problem Occour", Toast.LENGTH_LONG).show();
+            }
+        }) {
+            @Override
+            protected Map<String, String> getParams() {
+                Map<String, String> params = new HashMap<String, String>();
+                params.put(KEY_EMAIL, email);
                 return params;
             }
         };

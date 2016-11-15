@@ -101,6 +101,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                             //Starting profile activity
                             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                            intent.putExtra("KEY_EMAIL", email);
                             startActivity(intent);
                         }else{
                             //If the server response is not success
