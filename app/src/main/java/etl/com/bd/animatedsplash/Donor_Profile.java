@@ -21,7 +21,7 @@ public class Donor_Profile extends AppCompatActivity {
 
 
     TextView tv_level_Name, tv_level_email, tv_Full_Name, tv_Gender, tv_Age, tv_Number, tv_Address, tv_Blood_Group;
-    ImageView iv_call,iv_sms,iv_email;
+    ImageView iv_call,iv_sms,iv_email,donor_pic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +38,7 @@ public class Donor_Profile extends AppCompatActivity {
         iv_call = (ImageView)findViewById(R.id.iv_call);
         iv_sms = (ImageView)findViewById(R.id.iv_massage);
         iv_email = (ImageView)findViewById(R.id.iv_email);
+        donor_pic = (ImageView)findViewById(R.id.donor_pic);
 
         tv_level_Name.setText(getIntent().getStringExtra("Name"));
         tv_level_email.setText(getIntent().getStringExtra("Email"));
@@ -47,6 +48,16 @@ public class Donor_Profile extends AppCompatActivity {
         tv_Number.setText(getIntent().getStringExtra("Number"));
         tv_Address.setText(getIntent().getStringExtra("Address"));
         tv_Blood_Group.setText(getIntent().getStringExtra("blood_group"));
+
+
+
+       String FemaleDonor = getIntent().getStringExtra("Gender");
+
+        if(FemaleDonor.toString().equals("Female")){
+            donor_pic.setImageResource(R.drawable.femaledonor);
+        }else{
+            donor_pic.setImageResource(R.drawable.maledonor);
+        }
 
 
        iv_call.setOnClickListener(new View.OnClickListener() {

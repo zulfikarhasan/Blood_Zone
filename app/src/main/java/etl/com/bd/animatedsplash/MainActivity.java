@@ -335,6 +335,8 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_profile_settings) {
 
+            Intent intent = new Intent(MainActivity.this,Profile_Settings.class);
+            startActivity(intent);
         } else if (id == R.id.nav_help) {
             Intent intent = new Intent(MainActivity.this, Help.class);
             startActivity(intent);

@@ -7,6 +7,63 @@
 
     <string name="search_hint">Search</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!---Help -->
+
+    <string name="help_question_one">How can I use this app?</string>
+    <string name="help_ans_one">You must sign up first to search donar or donate blood by providing some basic information of yours. Then you should be login to our apps using your given email and password. Your given email and password is changable from the settings after logged in.</string>
+    <string name="help_question_two">What is about the privacy?</string>
+    <string name="help_ans_two">In the purpose of donating blood or ask for blood, Only valid users will be able to see your public profile including your contact numbers.</string>
+    <string name="help_question_three">What is the task of complain option?</string>
+    <string name="help_ans_three">You can make a limited number of complains to anyone with whom you performed an activity.You can write us any kind of real and documented annoying things are being performed with you by that particular person.And if your complain will be proved then we will takes necessary steps against that user.</string>
+    <string name="help_question_four">How can I reset my password?</string>
+    <string name="help_ans_four">You can change it from your profile settings option.Provide the current password and give your new password then save it. wow! everything is done!</string>
+
+
+    <!-- tips for donar -->
+    <string name="tipsfordonnar_before_donation">Before Donation:</string>
+    <string name="tipsfordonnar_before_donation_one">1.  In the days before your donation, eat healthy, iron-rich foods such as spinach, red meat,fish, poultry, beans, iron-fortified cereals and raisins.This will help maintain a healthy iron level. The number one reason for deferrals (especially women) is anemia.</string>
+    <string name="tipsfordonnar_before_donation_two">2.  Get a good night sleep.</string>
+    <string name="tipsfordonnar_before_donation_three">3.   At least 3 hours before donating, eat a balanced meal and avoid fatty foods,such as hamburgers, fries, or ice cream.</string>
+    <string name="tipsfordonnar_before_donation_four">4.   Drink an extra 16 oz. of water and fluids before the donation; you can be deferred for dehydration.</string>
+    <string name="tipsfordonnar_before_donation_five">5.   Remember that your system must be free of aspirin for three days (72 hours) or ibuprofen for 24 hours prior to donation.</string>
+    <string name="tipsfordonnar_during_donation">During Donation:</string>
+    <string name="tipsfordonnar_during_donation_one">1.   Wear clothing with short sleeves or sleeves that can be raised above the elbow.</string>
+    <string name="tipsfordonnar_during_donation_two">2.   If you have a preference of arm or vein that you like the phlebotomist to use for your donation, let them know.</string>
+    <string name="tipsfordonnar_during_donation_three">3.   Relax, listen to music, talk to others, or simply just catch up on some reading on our comfortable donor lounge chairs designed specifically for apheresis donations,which are equipped for our donors to surf the internet or watch movies.</string>
+    <string name="tipsfordonnar_during_donation_four">4.   Enjoy an assortment of refreshments in our canteen area immediately after donating.</string>
+    <string name="tipsfordonnar_after_donation">After Donation:</string>
+    <string name="tipsfordonnar_after_donation_one">1.   Drink plenty of fluids over the next 24-48 hours to replenish any fluids you lost during donation.</string>
+    <string name="tipsfordonnar_after_donation_two">2.   Avoid strenuous physical activity or heavy lifting for about 24 hours after donation.</string>
+    <string name="tipsfordonnar_after_donation_three">3.   If you feel light headed, lie down, preferably with feet elevated, until the feeling passes.</string>
+    <string name="tipsfordonnar_after_donation_four">4.   If something doesn’t feel right, call the Donor Center’s toll-free number provided to you after your donation.</string>
+    <string name="tipsfordonnar_after_donation_five">5.   Enjoy your day and know that you have made a positive difference.</string>
+
+    <!-- FAQs -->
+   <string name="FAQs_question_1">What is the minimum required age for donating blood?</string>
+    <string name="FAQs_ans_1">If you can donate blood after 18 but you must fill all other physical criteria.</string>
+    <string name="FAQs_question_2">Is it safe to donate blood?</string>
+    <string name="FAQs_ans_2">Yes,it is totally safe to donate.</string>
+    <string name="FAQs_question_3">Is there any side effect of donating blood?</string>
+    <string name="FAQs_ans_3">Not at all.</string>
+    <string name="FAQs_question_4">Can I be senseless as a result of blood donation?</string>
+    <string name="FAQs_ans_4">A few number of people may face physical abnormality because of their physical condition but he/she can overcome it within a very short moment.</string>
+    <string name="FAQs_question_5">After donating blood is there any possibility to get infected?</string>
+    <string name="FAQs_ans_5">No,there is no chance to happen that, but you should not massage that portion of your hand, where blood is taken from.</string>
+    <string name="FAQs_question_6">After drinking alcohol can I donate blood?</string>
+    <string name="FAQs_ans_6">No, you can not donate blood within 24 hours of your last drink.</string>
+    <string name="FAQs_question_7">Can I donate blood as I am suffering for abnormal blood pressure?</string>
+    <string name="FAQs_ans_7">Yes, if your blood pressure is under control, you can donate.</string>
+    <string name="FAQs_question_8">Can a mother donate blood during or after pregnancy?</string>
+    <string name="FAQs_ans_8">No, mother cannot donate blood during pregnancy and within 15 month of delivery.</string>
+    <string name="FAQs_question_9">Can a mother donate blood during breast feeding?</string>
+    <string name="FAQs_ans_9">No, mother should not donate during breast feeding.</string>
+    <string name="FAQs_question_10">Can I donate when I have to take antibiotic medicine?</string>
+    <string name="FAQs_ans_10">No, you cannot donate blood within 7 days of taking antibiotic.</string>
+    <string name="FAQs_question_11">If I suffer for Flux, can I donate blood?</string>
+    <string name="FAQs_ans_11">No, as you carry some germ of Flux in your blood, you cannot donate blood.</string>
+    <string name="FAQs_question_12">Can a diabetic patient donate blood?</string>
+    <string name="FAQs_ans_12">No,they should not, but in special situation they also can donate blood.</string>
+    <string name="FAQs_question_13">Can I donate blood after tacking Vaccine?</string>
+    <string name="FAQs_ans_13">No,you cannot donate blood within 4 weeks of taking vaccine.</string>
+
 </resources>

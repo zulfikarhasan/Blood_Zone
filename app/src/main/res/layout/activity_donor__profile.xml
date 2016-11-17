@@ -16,9 +16,10 @@
         android:orientation="horizontal"
         android:weightSum="3">
         <ImageView
+            android:id="@+id/donor_pic"
             android:layout_width="88dp"
             android:layout_height="86dp"
-            android:src="@drawable/maledonor" />
+             />
 
         <LinearLayout
             android:layout_width="match_parent"

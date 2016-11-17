@@ -8,8 +8,7 @@
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.SEND_SMS"></uses-permission>
-
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:name=".utils.ServiceHelper"
@@ -28,36 +27,34 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
-
-        <activity android:name=".Registration"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Registration"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".MainActivity"
             android:label="Blood Zone"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".TipsForDonnar"
-            android:label="Tips For Donner"
+            android:theme="@style/HelpTheme"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FAQs"
-            android:label="FAQ"
+            android:theme="@style/HelpTheme"
             android:parentActivityName=".MainActivity" />
-
         <activity
             android:name=".Help"
-            android:label="Help"
+            android:theme="@style/HelpTheme"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".About"
             android:label="About"
             android:parentActivityName=".MainActivity" />
-
-
-        <activity android:name=".Donor_Profile"
-            android:parentActivityName=".MainActivity"
+        <activity
+            android:name=".Donor_Profile"
             android:label="Donor Profile"
-            ></activity>
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Profile_Settings"></activity>
     </application>
 
 </manifest>
