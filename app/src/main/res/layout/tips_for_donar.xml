@@ -20,7 +20,7 @@
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
                 android:fitsSystemWindows="true"
-                android:background="@drawable/transfusion"
+                android:background="@drawable/tipsfordonor"
                 android:id="@+id/profile_id"
                 app:layout_collapseMode="parallax" />
 

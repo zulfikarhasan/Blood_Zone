@@ -68,6 +68,9 @@ public class MainActivity extends AppCompatActivity
     Spinner spinner_blood_group;
     String blood_group;
 
+    TextView navProfileName ;
+    TextView navProfileemail;
+
     // Declaring the String Array with the Text Data for the Spinners
     String[] Blood_Group = {"Search Blood", "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB-"};
 
@@ -156,8 +159,8 @@ public class MainActivity extends AppCompatActivity
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         View nhview = navigationView.getHeaderView(0);
         navigationView.setNavigationItemSelectedListener(this);
-        TextView navProfileName = (TextView) nhview.findViewById(R.id.tv_nav_username);
-        TextView navProfileemail = (TextView) nhview.findViewById(R.id.tv_nav_email);
+        navProfileName = (TextView) nhview.findViewById(R.id.tv_nav_username);
+        navProfileemail = (TextView) nhview.findViewById(R.id.tv_nav_email);
 
         navProfileName.setText(nav_username);
         navProfileemail.setText(nav_useremail);
@@ -336,6 +339,7 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_profile_settings) {
 
             Intent intent = new Intent(MainActivity.this,Profile_Settings.class);
+            intent.putExtra("KEY_EMAIL", nav_useremail);
             startActivity(intent);
         } else if (id == R.id.nav_help) {
             Intent intent = new Intent(MainActivity.this, Help.class);
@@ -445,7 +449,7 @@ public class MainActivity extends AppCompatActivity
                                 for (int i = 0; i < array.length(); i++) {
                                     JSONObject innerobj = array.getJSONObject(i);
                                     nav_username = innerobj.getString("name");
-                                    Toast.makeText(getApplicationContext(), nav_username, Toast.LENGTH_SHORT).show();
+                                    navProfileName.setText(nav_username);
                                 }
                             }
 
@@ -457,7 +461,6 @@ public class MainActivity extends AppCompatActivity
             @Override
             public void onErrorResponse(VolleyError error) {
                 mProgressDialog.dismiss();
-               // Toast.makeText(MainActivity.this, "Internet Problem Occour", Toast.LENGTH_LONG).show();
             }
         }) {
             @Override

@@ -66,4 +66,9 @@
     <string name="FAQs_question_13">Can I donate blood after tacking Vaccine?</string>
     <string name="FAQs_ans_13">No,you cannot donate blood within 4 weeks of taking vaccine.</string>
 
+    <string name="about">Howdy friend, Welcome to Blood Zone.This is an app about donating blood to save other lifes.
+This app is developed by FCI Blood Donation Group.
+To find donars here, first of all you have to become a member of donar list by singing up yourself here.
+Internet have to available to use this app.</string>
+
 </resources>

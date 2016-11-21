@@ -9,7 +9,7 @@ public class Config {
     public static final String KEY_EMAIL="email";
     public static final String KEY_PASSWORD="password";
     public static final String LOGIN_SUCCESS="success";
-    public static final String SHARED_PREF_NAME="mySharedPref";
+    public static final String SHARED_PREF_NAME="SharedPref";
     public static final String EMAIL_SHARED_PREF="email";
     public static final String LOGGEDIN_SHARED_PREF="loggedin";
 

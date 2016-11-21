@@ -41,7 +41,15 @@
         <activity
             android:name=".FAQs"
             android:theme="@style/HelpTheme"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+
+            </activity>
+
+
         <activity
             android:name=".Help"
             android:theme="@style/HelpTheme"

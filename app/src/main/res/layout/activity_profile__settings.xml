@@ -1,62 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_profile__settings"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="etl.com.bd.animatedsplash.Profile_Settings"
-    android:orientation="vertical">
+    android:layout_margin="25dp"
+    android:layout_marginTop="25dp"
 
-    <TextView
-        android:id="@+id/tv_profile_settings_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name:"/>
-    <EditText
-        android:id="@+id/et_profile_settings_name"
+    >
+
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Phone Number:"/>
-    <EditText
-        android:id="@+id/et_profile_settings_phone_number"
+        android:orientation="horizontal"
+        android:weightSum="3">
+        <ImageView
+            android:id="@+id/donor_pic"
+            android:layout_width="88dp"
+            android:layout_height="86dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/tv_profile_setting_level_Name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Md Zulfikar Hasan"
+                android:textSize="25dp"
+                android:layout_weight="2"/>
+            <TextView
+                android:id="@+id/tv_profile_setting_level_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="zulfikarhasan07@gmail.com"/>
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Address:"/>
-    <EditText
-        android:id="@+id/et_profile_settings_address"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_profile_setting_Full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Md Zulfikar Hasan"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Blood Group:"/>
-    <EditText
-        android:id="@+id/et_profile_settings_blood_group"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Gender:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_profile_setting_Gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age"/>
-    <EditText
-        android:id="@+id/et_profile_settings_age"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Age:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_profile_setting_Age"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="18"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Blood Group:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_profile_setting_Blood_Group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="B+"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Number:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_profile_setting_Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="01834580056"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address:"
+            android:layout_weight="3"/>
+        <TextView
+            android:id="@+id/tv_profile_setting_Address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="South Baridara, Merul badda,Dhaka"
+            android:layout_weight="1"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginTop="5dp"
+        android:background="#b0bec5"
+        android:layout_gravity="center">
+    </View>
 
 
 </LinearLayout>

@@ -26,9 +26,9 @@ import etl.com.bd.animatedsplash.mode.DemoDataHandler;
 
 public class Profile_Settings extends AppCompatActivity {
 
-    String name,email,phone_number,address,blood_group,age;
+    String name,email,phone_number,address,blood_group,age,gender,mail;
 
-    EditText et_name,et_phone_number,et_address,et_blood_group,et_age;
+    TextView tv_level_name,tv_level_email,tv_name,tv_gender,tv_age,tv_blood_group,tv_number,tv_address;
 
     public static final String KEY_EMAIL = "email";
     ProgressDialog mProgressDialog;
@@ -37,12 +37,14 @@ public class Profile_Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile__settings);
 
-        et_name = (EditText)findViewById(R.id.et_profile_settings_name);
-        et_phone_number = (EditText)findViewById(R.id.et_profile_settings_phone_number);
-        et_address = (EditText)findViewById(R.id.et_profile_settings_address);
-        et_blood_group = (EditText)findViewById(R.id.et_profile_settings_blood_group);
-        et_age = (EditText)findViewById(R.id.et_profile_settings_age);
-
+        tv_level_name = (TextView)findViewById(R.id.tv_profile_setting_level_Name);
+        tv_level_email = (TextView)findViewById(R.id.tv_profile_setting_level_email);
+        tv_name = (TextView)findViewById(R.id.tv_profile_setting_Full_name);
+        tv_gender = (TextView)findViewById(R.id.tv_profile_setting_Gender);
+        tv_age = (TextView)findViewById(R.id.tv_profile_setting_Age);
+        tv_blood_group = (TextView)findViewById(R.id.tv_profile_setting_Blood_Group);
+        tv_number = (TextView)findViewById(R.id.tv_profile_setting_Number);
+        tv_address = (TextView)findViewById(R.id.tv_profile_setting_Address);
 
         //profile
         Intent intent = getIntent();
@@ -51,16 +53,13 @@ public class Profile_Settings extends AppCompatActivity {
 
 
 
-
-
-
-
     }
 
     //profile
     private void getUserInformation(final String email){
         String linkrequest = "http://10.0.2.2/Blooddonetion/userdetails.php";
-
+        mProgressDialog = new ProgressDialog(Profile_Settings.this);
+        mProgressDialog.setMessage("Loading...");
         StringRequest stringRequest = new StringRequest(Request.Method.POST, linkrequest,
                 new Response.Listener<String>() {
                     @Override
@@ -73,17 +72,23 @@ public class Profile_Settings extends AppCompatActivity {
                                 for (int i = 0; i < array.length(); i++) {
                                     JSONObject innerobj = array.getJSONObject(i);
                                      name = innerobj.getString("name");
+                                     mail = innerobj.getString("email");
+                                     gender = innerobj.getString("gender");
                                      phone_number = innerobj.getString("phone_number");
                                      address = innerobj.getString("address");
                                      blood_group = innerobj.getString("blood_group");
                                      age = innerobj.getString("age");
 
-                                    DemoDataHandler dhandler = new DemoDataHandler();
-                                    dhandler.setFull_name(name.toString().trim());
-                                   dhandler.setPhone_number(phone_number.toString().trim());
-                                    dhandler.setAddress(address.toString().trim());
-                                    dhandler.setBlood_group(blood_group.toString().trim());
-                                    dhandler.setAge(age.toString().trim());
+                                    tv_level_name.setText(name);
+                                    tv_level_email.setText(email);
+                                    tv_name.setText(name);
+                                    tv_number.setText(phone_number);
+                                    tv_address.setText(address);
+                                    tv_blood_group.setText(blood_group);
+                                    tv_age.setText(age);
+                                    tv_gender.setText(gender);
+
+
                                 }
                             }
 
