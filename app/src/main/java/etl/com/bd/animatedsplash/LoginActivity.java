@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         editTextPassword = (EditText) findViewById(R.id.et_main_password);
 
         buttonLogin = (AppCompatButton) findViewById(R.id.btn_main_Login);
-        tv_signupLink = (TextView)findViewById(R.id.linkSignup);
+        tv_signupLink = (TextView) findViewById(R.id.linkSignup);
 
         //Adding click listener
         buttonLogin.setOnClickListener(this);
@@ -52,26 +52,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     }
 
 
-
-
-
     @Override
     public void onClick(View v) {
         //Calling the login function
         //login();
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_main_Login:
                 login();
                 break;
             case R.id.linkSignup:
-                startActivity(new Intent(LoginActivity.this,Registration.class));
+                startActivity(new Intent(LoginActivity.this, Registration.class));
                 break;
         }
     }
-
-
-
-
 
 
     private void login(){

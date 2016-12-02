@@ -58,11 +58,16 @@
             android:name=".About"
             android:label="About"
             android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".Profile_Settings"
+            android:label="Profile Settings"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Donor_Profile"
             android:label="Donor Profile"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Profile_Settings"></activity>
+
     </application>
 
 </manifest>

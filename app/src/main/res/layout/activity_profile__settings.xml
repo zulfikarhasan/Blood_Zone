@@ -31,14 +31,13 @@
                 android:id="@+id/tv_profile_setting_level_Name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Md Zulfikar Hasan"
                 android:textSize="25dp"
                 android:layout_weight="2"/>
             <TextView
                 android:id="@+id/tv_profile_setting_level_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="zulfikarhasan07@gmail.com"/>
+                />
         </LinearLayout>
 
 
@@ -70,7 +69,7 @@
             android:id="@+id/tv_profile_setting_Full_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Md Zulfikar Hasan"
+
             android:layout_weight="1"/>
 
     </LinearLayout>
@@ -98,7 +97,7 @@
             android:id="@+id/tv_profile_setting_Gender"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Male"
+
             android:layout_weight="1"/>
     </LinearLayout>
     <View
@@ -125,7 +124,6 @@
             android:id="@+id/tv_profile_setting_Age"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="18"
             android:layout_weight="1"/>
     </LinearLayout>
     <View
@@ -151,7 +149,7 @@
             android:id="@+id/tv_profile_setting_Blood_Group"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="B+"
+
             android:layout_weight="1"/>
     </LinearLayout>
     <View
@@ -178,7 +176,7 @@
             android:id="@+id/tv_profile_setting_Number"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="01834580056"
+
             android:layout_weight="1"/>
 
     </LinearLayout>
@@ -206,7 +204,7 @@
             android:id="@+id/tv_profile_setting_Address"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="South Baridara, Merul badda,Dhaka"
+
             android:layout_weight="1"/>
     </LinearLayout>
     <View
